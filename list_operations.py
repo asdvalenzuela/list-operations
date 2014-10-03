@@ -139,7 +139,7 @@ def custom_remove(input_list, value):
     
 def custom_pop(input_list):
     """custom_pop(input_list) imitates input_list.pop()"""
-    x = input_list[custom_len(input_list)-1]
+    x = input_list[-1]
     del input_list[-1]
     return x
 
@@ -155,7 +155,7 @@ def custom_count(input_list, value):
     n=0
     for i in range(custom_len(input_list)):
         if input_list[i] == value:
-            n=n+1
+            n += 1
     return n
 
 def custom_reverse(input_list):
@@ -178,7 +178,7 @@ def custom_equality(some_list, another_list):
     """
     if custom_len(some_list) != custom_len(another_list):
         return False
-    for i in range(custom_len(some_list)-1):
+    for i in range(custom_len(some_list)):
         if some_list[i] != another_list[i]:
             return False
     return True
